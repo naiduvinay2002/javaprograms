@@ -1,24 +1,20 @@
 package com.tasks;
 
 public class Employee {
-	private int empid;
-	private String name;
-	private String designation;
-	private double salary;
-	private int performanceRating;
+	int empid;
+	String name;
+	String designation;
+	double salary;
+	int performanceRating;
 	
 	public Employee(int empid, String name, String designation, double salary, int performanceRating) {
-		super();
+		
 		this.empid = empid;
 		this.name = name;
 		this.designation = designation;
 		this.salary = salary;
 		this.performanceRating = performanceRating;
-		System.out.println("Employee ID: "+empid);
-		System.out.println("Employee Name: "+name);
-		System.out.println("Current Designation: "+designation);
-		System.out.println("Employee Salary: $"+salary);
-		System.out.println("Employee Performance Rating: "+performanceRating);
+		
 	}
 
 	public int getEmpid() {
@@ -57,12 +53,12 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public void promoteEmployee() {
+	public void promoteEmployee(String dsg) {
 		if(performanceRating>=4) {
-			salary+=salary*(20%100);
-			designation="Senior Developer";
+			salary+=salary*20/100;
+			designation=dsg;
 			System.out.println();
-			System.out.println("After Promotion");
+			System.out.println("=====After Promotion=====");
 			System.out.println("New Designation: "+designation);
 			System.out.println("Updated Salary: $"+salary);
 		}
