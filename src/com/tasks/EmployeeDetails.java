@@ -2,7 +2,7 @@ package com.tasks;
 
 import java.util.Scanner;
 
-public class EmployeeDetails {
+public class EmployeeProcessor {
 
 	public static void main(String[] args) {
 		
